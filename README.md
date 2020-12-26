@@ -1,5 +1,21 @@
 # AWSLambdaC++
-A collections of AWS Lambda functions written in C++.
+
+A collection of AWS Lambda functions written in C++. There is currently a single function that makes use of AWS Comprehend sentiment analysis. 
+
+Example request:
+
+```json
+{
+"lang": "en",
+"text": "I love it"
+}
+```
+
+Example response:
+
+```
+"POSITIVE"
+```
 
 # Build
 
@@ -8,6 +24,8 @@ This project uses Make and CMake for the build system. The following command wil
 ```shell
 make
 ```
+
+The generated [AWS Lambda package](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html) can be directly deployed on AWS. 
 
 # Development
 
